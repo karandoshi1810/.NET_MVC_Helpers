@@ -1,0 +1,21 @@
+﻿@model MVCDemo_HtmlHelpers.Models.Company
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<div>
+        @using(Html.BeginForm())
+        {
+            foreach (var dept in Model.Departments)
+            {
+                @Html.RadioButtonFor(m =>m.SelectedDepartment, dept.Id 
+                //,dept.IsSelected.HasValue && dept.IsSelected.Value? new {@checked = "checked"}: null
+                ) @dept.Name
+            }
+            <br />
+            <br />
+            <input type="submit" value="Submit" />
+        }
+</div>

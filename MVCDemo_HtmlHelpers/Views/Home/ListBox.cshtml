@@ -1,0 +1,16 @@
+﻿@model MVCDemo_HtmlHelpers.Models.CitiesViewModel
+
+@{
+    ViewBag.Title = "ListBox";
+}
+
+<h2>ListBox</h2>
+
+<div style="font-family:Arial;">
+    @using(@Html.BeginForm())
+    {
+        @Html.ListBoxFor(x=>x.SelectedCities,Model.Cities)
+        <br />
+        <input type="submit" value="Submit" />
+    }
+</div>

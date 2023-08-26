@@ -1,0 +1,13 @@
+﻿@model MVCDemo_HtmlHelpers.Models.City
+
+@{
+    ViewBag.Title = "CheckBox";
+}
+
+<h2>CheckBox</h2>
+
+@Html.HiddenFor(x => x.IsSelected);
+@Html.HiddenFor(x => x.Name);
+
+@Html.CheckBoxFor(x => x.IsSelected);
+@Html.DisplayFor(x => x.Name);
